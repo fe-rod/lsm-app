@@ -1,0 +1,36 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="side-menu">
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear>
+              <img src="/img/logo-lsm-invert.svg" width="240px" />
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/agenda">
+          AGENDA
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/speakers">
+          SPEAKERS
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/documents">
+          DOCUMENTS
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/venue">
+          VENUE
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
