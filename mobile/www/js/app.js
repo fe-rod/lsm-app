@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('lsm', ['ionic', 'lsm.controllers'])
+angular.module('lsm', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -31,37 +31,46 @@ angular.module('lsm', ['ionic', 'lsm.controllers'])
 
   .state('app.agenda', {
     url: "/agenda",
-    controller: 'AgendaCtrl',
     views: {
       'menuContent': {
-        templateUrl: "templates/agenda.html"
+        templateUrl: "templates/agenda.html",
+          controller: 'AgendaCtrl'
       }
     }
   })
   .state('app.speakers', {
       url: "/speakers",
-      controller: 'SpeakersCtrl',
       views: {
           'menuContent': {
-              templateUrl: "templates/speakers.html"
+              templateUrl: "templates/speakers.html",
+              controller: 'SpeakersCtrl'
           }
       }
   })
+      .state('app.mentors', {
+          url: "/mentors",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/mentors.html",
+                  controller: 'MentorsCtrl'
+              }
+          }
+      })
   .state('app.documents', {
       url: "/documents",
-      controller: 'DocumentsCtrl',
       views: {
           'menuContent': {
-              templateUrl: "templates/documents.html"
+              templateUrl: "templates/documents.html",
+              controller: 'DocumentsCtrl'
           }
       }
   })
   .state('app.venue', {
       url: "/venue",
-      controller: 'VenueCtrl',
       views: {
           'menuContent': {
-              templateUrl: "templates/venue.html"
+              templateUrl: "templates/venue.html",
+              controller: 'VenueCtrl'
           }
       }
   });

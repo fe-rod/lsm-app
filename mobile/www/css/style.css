@@ -2,6 +2,65 @@
     /*background-color: #222222;*/
 /*}*/
 
+.scroll-content{
+    background-color: #EAEAEA;
+    /*background-image:url("/img/pattern-7gpe.png");*/
+    /*background-repeat:repeat*/
+}
+
+.bar-lsm {
+    color: #e7dc00;
+    background-color: #222;
+}
+
+.button.button-clear{
+    color: #e7dc00;
+}
+
 .side-menu .item{
     background-color: #222222;
+}
+
+.speaker-item{
+    padding: 0;
+}
+
+.speaker-item p {
+    padding: 16px;
+    background-color: #222222;
+    color: #f1f2f3;
+}
+
+.speaker-image{
+    height: 240px;
+}
+
+.speaker-name{
+    position: relative;
+    background-color: #222;
+    height: 28px;
+    padding-left: 9px;
+    padding-top: 7px;
+    padding-right: 8px;
+    display: inline-block;
+}
+
+.speaker-name h2{
+    font-size: 12px;
+    color: #FFF200;
+}
+
+.speaker-footer {
+    background-color: #222;
+    border-color: #444;
+}
+
+.speaker-footer p {
+    color: #FFF200;
+}
+
+.speaker-footer i{
+    padding-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
 }

@@ -1,4 +1,4 @@
-angular.module('lsm.controllers', [])
+angular.module('lsm')
 
     .controller('DocumentsCtrl', function($scope) {
 

@@ -1,6 +1,6 @@
 angular.module('lsm')
 
-    .controller('SpeakersCtrl', function($scope, $log) {
+    .controller('MentorsCtrl', function($scope, $log) {
         $scope.speakers = [
             {
                 name : 'Federico Rodríguez',
@@ -113,5 +113,7 @@ angular.module('lsm')
                 twitterUrl: "https://twitter.com/fede_abo"
             }
         ];
+
+        $log.info($scope.speakers)
 
     });
