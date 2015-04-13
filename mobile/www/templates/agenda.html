@@ -1,5 +1,36 @@
-<ion-view view-title="Agenda">
-  <ion-content>
-    <h1>Agenda</h1>
-  </ion-content>
+<ion-view view-title="AGENDA">
+    <ion-header-bar align-title="left" class="bar-lsm-sub bar-subheader">
+        <div class="row row-center">
+            <div class="col col-center" ng-click="selectDay(0)" ng-class="{'selected': day == 0}">
+                Day 1
+            </div>
+            <div class="col col-center" ng-click="selectDay(1)" ng-class="{'selected': day == 1}">
+                Day 2
+            </div>
+            <div class="col col-center" ng-click="selectDay(2)" ng-class="{'selected': day == 2}">
+                Day 3
+            </div>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list card event" ng-repeat="event in events">
+            <div class="item-header row row-center">
+                <div class="col">
+                    <span  class="event-time">{{event.timeString}}</span>
+                </div>
+                <div class="col">
+                    <span ng-if="event.type != 'team' && event.type != 'food' && event.type != 'beer'"
+                          class="event-type {{event.type}}">{{event.type}}</span>
+                    <i ng-if="event.type == 'team' || event.type == 'food' || event.type == 'beer'"
+                            class="icon icon-event"
+                            ng-class="{'ion-ios-people': event.type == 'team',
+                                       'ion-fork': event.type == 'food',
+                                       'ion-beer': event.type == 'beer'}"></i>
+                </div>
+            </div>
+            <div class="item item-text-wrap">
+                {{event.name}}
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

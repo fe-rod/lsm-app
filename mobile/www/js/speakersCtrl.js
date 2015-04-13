@@ -1,6 +1,6 @@
 angular.module('lsm')
 
-    .controller('SpeakersCtrl', function($scope, $log) {
+    .controller('SpeakersCtrl', function($scope) {
         $scope.speakers = [
             {
                 name : 'Federico Rodríguez',
