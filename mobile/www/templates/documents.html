@@ -1,5 +1,16 @@
-<ion-view view-title="Documents">
+<ion-view view-title="DOCUMENTS">
   <ion-content>
-    <h1>Documentos</h1>
+      <div class="card" ng-repeat="doc in documents" ng-click="openLink(doc)">
+          <!--<div class="item-header row row-center">-->
+              <!--<div class="col">-->
+                <!---->
+              <!--</div>-->
+          <!--</div>-->
+          <div class="item item-text-wrap">
+              <i class="icon icon-doc" ng-class="{'ion-link': !doc.isDoc,'ion-document-text': doc.isDoc}"></i>
+              {{doc.name}}
+              <p>{{doc.description}}</p>
+          </div>
+      </div>
   </ion-content>
 </ion-view>
