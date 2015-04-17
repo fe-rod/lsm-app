@@ -1,6 +1,8 @@
 <ion-view view-title="VENUE">
   <ion-content scroll="false">
-    <div id="map" style="height: 450px"></div>
+      <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+          <ui-gmap-marker coords="marker.coords" idkey="marker.id"></ui-gmap-marker>
+      </ui-gmap-google-map>
       <ion-list>
         <ion-item>
             Ingenio, edificio Los Naranjos

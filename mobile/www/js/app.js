@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('lsm', ['ionic', 'ngCordova'])
+angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,8 +20,16 @@ angular.module('lsm', ['ionic', 'ngCordova'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
+
+        uiGmapGoogleMapApiProvider.configure({
+            //    key: 'your api key',
+            v: '3.17',
+            libraries: ''
+        });
+
+
+        $stateProvider
 
   .state('app', {
     url: "/app",
