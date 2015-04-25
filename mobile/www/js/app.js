@@ -46,6 +46,15 @@ angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
       }
     }
   })
+  .state('app.agenda-detail', {
+        url: "/agenda-detail/:id",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/agenda-detail.html",
+                controller: 'AgendaDetailCtrl'
+            }
+        }
+  })
   .state('app.speakers', {
       url: "/speakers",
       views: {

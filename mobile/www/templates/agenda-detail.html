@@ -1,0 +1,18 @@
+<ion-view view-title="EVENTO">
+   <ion-content>
+       <div class="card">
+           <div class="item item-text-wrap">
+                   <p><strong>{{event.name}}</strong></p>
+                   <p>By <span>{{event.speaker}}</span></p>
+           </div>
+           <div class="item speaker-image" back-img="./img/{{event.image}}">
+
+           </div>
+           <div class="item item-text-wrap">
+               <p>
+                   {{event.description}}
+               </p>
+           </div>
+       </div>
+   </ion-content>
+</ion-view>

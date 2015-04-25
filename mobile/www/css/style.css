@@ -179,3 +179,10 @@
 }
 
 .angular-google-map-container { height: 400px; }
+
+/*SIDE MENU*/
+.icon-menu {
+    text-align: center;
+    width: 30px;
+    display: inline-block;
+}
