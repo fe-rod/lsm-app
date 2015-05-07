@@ -1,6 +1,6 @@
 <ion-view view-title="SPEAKERS">
     <ion-content>
-            <div class="card" ng-repeat="speaker in speakers">
+            <div class="card" ng-repeat="speaker in speakers track by $index">
                 <div class="item item-text-wrap speaker-item" >
                     <div class="speaker-image" back-img="./img/{{speaker.image}}">
                         <div class="speaker-name">

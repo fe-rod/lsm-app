@@ -3,7 +3,7 @@ angular.module('lsm')
 .controller('AgendaCtrl', function($scope, $state, services, $ionicSideMenuDelegate) {
 
         function loadEvents(){
-            services.loadJSON("./data/events.json")
+            services.loadJSON("http://lsmapp.azurewebsites.net/events.json")
                 .then(function(data){
                     $scope.totalEvents = _.groupBy(data, "day");
                     $scope.events = $scope.totalEvents[0];

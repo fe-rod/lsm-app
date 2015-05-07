@@ -3,7 +3,7 @@ angular.module('lsm')
     .controller('DocumentsCtrl', function($scope, $cordovaInAppBrowser,$ionicPlatform, services) {
 
         function loadDocuments(){
-            services.loadJSON("./data/documents.json")
+            services.loadJSON("http://lsmapp.azurewebsites.net/documents.json")
                 .then(function(data){
                     $scope.documents = data;
                 })
