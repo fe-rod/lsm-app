@@ -1,14 +1,11 @@
 angular.module('lsm')
 
-.controller('AgendaDetailCtrl', function($scope, $stateParams, services) {
+.controller('AgendaDetailCtrl', function($scope, $stateParams, services, $localstorage) {
 
-        function loadEvents(){
-            services.loadJSON("http://lsmapp.azurewebsites.net/events.json")
-                .then(function(data){
-                    $scope.event = data[$stateParams.id];
-                })
+        function loadEvent(){
+            $scope.event = $localstorage.getObject($stateParams.id);
         }
 
-        loadEvents();
+        loadEvent();
 
 });

@@ -3,7 +3,7 @@
        <div class="card">
            <div class="item item-text-wrap">
                    <p><strong>{{event.name}}</strong></p>
-                   <p>By <span>{{event.speaker}}</span></p>
+                   <p ng-if="event.speaker">By <span>{{event.speaker}}</span></p>
            </div>
            <div class="item speaker-image" back-img="./img/{{event.image}}">
 
