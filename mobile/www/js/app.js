@@ -28,18 +28,6 @@ angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
       libraries: ''
   });
 
-  var defaultOptions = {
-    location: 'no',
-    clearcache: 'no',
-    toolbar: 'no'
-  };
-
-  document.addEventListener(function () {
-
-    $cordovaInAppBrowserProvider.setDefaultOptions(options)
-
-  }, false);
-
   $stateProvider
 
   .state('app', {
