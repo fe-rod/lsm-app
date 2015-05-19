@@ -20,16 +20,27 @@ angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
+.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider, $cordovaInAppBrowserProvider) {
 
-        uiGmapGoogleMapApiProvider.configure({
-            //    key: 'your api key',
-            v: '3.17',
-            libraries: ''
-        });
+  uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      v: '3.17',
+      libraries: ''
+  });
 
+  var defaultOptions = {
+    location: 'no',
+    clearcache: 'no',
+    toolbar: 'no'
+  };
 
-        $stateProvider
+  document.addEventListener(function () {
+
+    $cordovaInAppBrowserProvider.setDefaultOptions(options)
+
+  }, false);
+
+  $stateProvider
 
   .state('app', {
     url: "/app",

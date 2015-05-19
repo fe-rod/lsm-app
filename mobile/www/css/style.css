@@ -12,6 +12,11 @@
     padding-top: 0;
 }
 
+.item.documents-links{
+    padding-left: 68px;
+    padding-top: 25px;
+}
+
 .card {
     margin-top: 10px;
     margin-bottom: 10px;

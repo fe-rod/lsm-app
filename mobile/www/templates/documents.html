@@ -1,16 +1,14 @@
 <ion-view view-title="DOCUMENTS">
   <ion-content>
-      <div class="card" ng-repeat="doc in documents" ng-click="openLink(doc)">
-          <!--<div class="item-header row row-center">-->
-              <!--<div class="col">-->
-                <!---->
-              <!--</div>-->
-          <!--</div>-->
-          <div class="item item-text-wrap">
-              <i class="icon icon-doc" ng-class="{'ion-link': !doc.isDoc,'ion-document-text': doc.isDoc}"></i>
-              {{doc.name}}
-              <p>{{doc.description}}</p>
-          </div>
-      </div>
+    <div class="list">
+      <a class="item item-avatar documents-links" ng-click="dropbox_links()">
+        <img src="./img/dropbox-icon.png">
+        <span>Documents in Dropbox</span>
+      </a>
+      <a class="item item-avatar documents-links" ng-click="dropbox_links()">
+        <img src="./img/drive-icon.png">
+        <span>Documents in Google Drive</span>
+      </a>
+    </div>
   </ion-content>
 </ion-view>

@@ -2,30 +2,29 @@ angular.module('lsm')
 
     .controller('DocumentsCtrl', function($scope, $cordovaInAppBrowser,$ionicPlatform, services) {
 
-        function loadDocuments(){
-            services.loadJSON("http://lsmapp.azurewebsites.net/documents.json")
-                .then(function(data){
-                    $scope.documents = data;
+        var options = {
+            location: 'yes',
+            clearcache: 'yes',
+            toolbar: 'no'
+        };
+
+        $scope.dropbox_links = function () {
+            $cordovaInAppBrowser.open('https://drive.google.com/folderview?id=0BzlBFIXJEvEOflg2WmhNYzhyd1NiSHJNNUJsOXZ3ZTRidWVDSDBxYXQ0Y2VCM1F5TlVOR0U&usp=sharing', '_system', options)
+                .then(function(event) {
+                    // success
                 })
-        }
+                .catch(function(event) {
+                    // error
+                });
+        };
 
-        loadDocuments();
-
-        $scope.openLink = function(doc){
-            var options = {
-                location: 'yes',
-                toolbar: 'no'
-            };
-
-            $ionicPlatform.ready(function() {
-                $cordovaInAppBrowser.open("http://www.kimhartman.se/wp-content/uploads/2013/10/the-lean-startup-summary.pdf", '_system', options)
-                    .then(function(event) {
-                        // success
-                    })
-                    .catch(function(event) {
-                        // error
-                    });
-            });
-
-        }
+        $scope.drive_links = function () {
+            $cordovaInAppBrowser.open('https://drive.google.com/folderview?id=0BzlBFIXJEvEOflg2WmhNYzhyd1NiSHJNNUJsOXZ3ZTRidWVDSDBxYXQ0Y2VCM1F5TlVOR0U&usp=sharing', '_system', options)
+                .then(function(event) {
+                    // success
+                })
+                .catch(function(event) {
+                    // error
+                });
+        };
     });
