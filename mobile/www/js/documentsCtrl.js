@@ -9,7 +9,7 @@ angular.module('lsm')
         };
 
         $scope.dropbox_links = function () {
-            $cordovaInAppBrowser.open('https://drive.google.com/folderview?id=0BzlBFIXJEvEOflg2WmhNYzhyd1NiSHJNNUJsOXZ3ZTRidWVDSDBxYXQ0Y2VCM1F5TlVOR0U&usp=sharing', '_system', options)
+            $cordovaInAppBrowser.open('https://goo.gl/JxCJzs', '_system', options)
                 .then(function(event) {
                     // success
                 })
@@ -18,13 +18,13 @@ angular.module('lsm')
                 });
         };
 
-        $scope.drive_links = function () {
-            $cordovaInAppBrowser.open('https://drive.google.com/folderview?id=0BzlBFIXJEvEOflg2WmhNYzhyd1NiSHJNNUJsOXZ3ZTRidWVDSDBxYXQ0Y2VCM1F5TlVOR0U&usp=sharing', '_system', options)
-                .then(function(event) {
-                    // success
-                })
-                .catch(function(event) {
-                    // error
-                });
-        };
+//        $scope.drive_links = function () {
+//            $cordovaInAppBrowser.open('https://drive.google.com/folderview?id=0BzlBFIXJEvEOflg2WmhNYzhyd1NiSHJNNUJsOXZ3ZTRidWVDSDBxYXQ0Y2VCM1F5TlVOR0U&usp=sharing', '_system', options)
+//                .then(function(event) {
+//                    // success
+//                })
+//                .catch(function(event) {
+//                    // error
+//                });
+//        };
     });
