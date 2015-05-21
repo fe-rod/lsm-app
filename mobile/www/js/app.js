@@ -20,13 +20,15 @@ angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider, $cordovaInAppBrowserProvider) {
+.config(function($stateProvider, $ionicConfigProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider, $cordovaInAppBrowserProvider) {
 
   uiGmapGoogleMapApiProvider.configure({
       //    key: 'your api key',
       v: '3.17',
       libraries: ''
   });
+
+  $ionicConfigProvider.scrolling.jsScrolling(false);
 
   $stateProvider
 
