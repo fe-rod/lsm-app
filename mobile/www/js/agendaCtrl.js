@@ -1,6 +1,6 @@
 angular.module('lsm')
 
-.controller('AgendaCtrl', function($scope, $state, services, $ionicSideMenuDelegate, $localstorage) {
+.controller('AgendaCtrl', function($scope, $state, services, $ionicSideMenuDelegate, $localstorage,$ionicLoading) {
 
         /*function loadEvents(){
             services.loadJSON("http://lsmapp.azurewebsites.net/events.json")
@@ -13,6 +13,8 @@ angular.module('lsm')
         function loadEvents(){
             
             var tempEvents = [];
+            
+            $ionicLoading.show();
             
             services.loadJSON("https://spreadsheets.google.com/feeds/list/1MXlqvZXIRfYdIo_QVw7-3kT2ZbJykFmENo2Pn4UZ6ZA/od6/public/values?alt=json")
                 .then(function(data){
@@ -40,7 +42,8 @@ angular.module('lsm')
                     
                     $scope.totalEvents = _.groupBy(tempEvents, "day");
                     $scope.events = $scope.totalEvents[0];
-                })
+                    $ionicLoading.hide();
+                });
         }
         
         loadEvents();

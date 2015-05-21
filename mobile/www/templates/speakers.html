@@ -11,8 +11,8 @@
                         {{speaker.longBio}}
                     </p>
                 </div>
-                <div class="item speaker-footer">
-                    <a href="{{speaker.twitterUrl}}">
+                <div class="item speaker-footer" ng-if="speaker.hasTwitter">
+                    <a ng-click="openTwitter(speaker)">
                         <p><i class="icon ion-social-twitter"></i>{{speaker.twitterId}}</p>
                     </a>
                 </div>
