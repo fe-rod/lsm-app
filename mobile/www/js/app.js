@@ -83,6 +83,15 @@ angular.module('lsm', ['ionic', 'ngCordova', 'uiGmapgoogle-maps'])
           }
       }
   })
+  .state('app.sponsors', {
+      url: "/sponsors",
+      views: {
+          'menuContent': {
+              templateUrl: "templates/sponsors.html",
+              controller: 'SponsorsCtrl'
+          }
+      }
+  })
   .state('app.venue', {
       url: "/venue",
       views: {

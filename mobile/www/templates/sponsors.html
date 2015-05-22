@@ -1,0 +1,12 @@
+2<ion-view view-title="SPONSORS">
+    <ion-content>
+            <div class="card" ng-repeat="sponsor in sponsors track by $index">
+                <div class="item">
+                    {{sponsor.name}}
+                </div>
+                <div class="item item-text-wrap" >
+                    <img ng-src="./img/{{sponsor.image}}"></img>
+                </div>
+            </div>
+    </ion-content>
+</ion-view>
